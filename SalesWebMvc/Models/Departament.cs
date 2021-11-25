@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SalesWebMvc.Models
 {
@@ -14,7 +12,6 @@ namespace SalesWebMvc.Models
 
         public Departament()
         {
-
         }
 
         public Departament(int id, string name)
@@ -27,6 +24,7 @@ namespace SalesWebMvc.Models
         {
             Sellers.Add(seller);
         }
+
         public double TotalSales(DateTime initial, DateTime final)
         {
             return Sellers.Sum(seller => seller.TotalSales(initial, final));
